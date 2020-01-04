@@ -6,7 +6,6 @@ node_modules/
 *.pid
 *.node-*
 .DS_Store
-package-lock.json
 
 .jshintrc
 .watchmanconfig

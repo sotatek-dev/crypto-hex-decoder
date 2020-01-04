@@ -1,81 +1,92 @@
-module.exports={
+module.exports = {
   PlaceOrder: {
     msg: [
       {
         sender: Buffer.from([]),
-        id: "",
-        symbol: "",
+        id: '',
+        symbol: '',
         ordertype: 0,
         side: 0,
         price: 0,
         quantity: 0,
         timeinforce: 0,
-        msgType: "NewOrderMsg"
-      }
+        msgType: 'NewOrderMsg',
+      },
     ],
-    signatures:[{
-      pub_key: Buffer.from([]),
-      signature: Buffer.from([]),
-      account_number: 0,
-      sequence: 0
-    }],  
-    memo: "",
-    source: 0,
-    data: "",
-    msgType:"StdTx"
-  },
-  CancelOrder: {    
-    msg: [{
-      sender: Buffer.from([]),
-      symbol: "",
-      refid: "",
-      msgType: "CancelOrderMsg"
-    }],
-    signatures: [{
-      pub_key: Buffer.from([]), //Buffer
-      signature:  Buffer.from([]), //Buffer
-      account_number: 0,
-      sequence: 0
-    }],
-    memo: "",
-    source: 0,
-    data: "",
-    msgType: "StdTx"
-  },
-  Transfer:{
-    msg:[{
-      inputs:
-      [
-        {
-          address:Buffer.from([]),
-          coins:[{
-            denom:"",
-            amount:0
-          }]
-        }
-      ],
-      outputs:[
-        {
-          address:Buffer.from([]),
-          coins:[{
-            denom:"",
-            amount:0
-          }]
-        }
-      ],
-      msgType:"MsgSend"
-    }],
-    signatures:[
+    signatures: [
       {
-        pub_key:Buffer.from([]),
-        signature:Buffer.from([]),
-        account_number:0,
-        sequence:0
-      }
+        pub_key: Buffer.from([]),
+        signature: Buffer.from([]),
+        account_number: 0,
+        sequence: 0,
+      },
     ],
-    memo:"",
-    source:0,
-    data:"",
-    msgType:"StdTx"
-  }
-}
+    memo: '',
+    source: 0,
+    data: '',
+    msgType: 'StdTx',
+  },
+  CancelOrder: {
+    msg: [
+      {
+        sender: Buffer.from([]),
+        symbol: '',
+        refid: '',
+        msgType: 'CancelOrderMsg',
+      },
+    ],
+    signatures: [
+      {
+        pub_key: Buffer.from([]), //Buffer
+        signature: Buffer.from([]), //Buffer
+        account_number: 0,
+        sequence: 0,
+      },
+    ],
+    memo: '',
+    source: 0,
+    data: '',
+    msgType: 'StdTx',
+  },
+  Transfer: {
+    msg: [
+      {
+        inputs: [
+          {
+            address: Buffer.from([]),
+            coins: [
+              {
+                denom: '',
+                amount: 0,
+              },
+            ],
+          },
+        ],
+        outputs: [
+          {
+            address: Buffer.from([]),
+            coins: [
+              {
+                denom: '',
+                amount: 0,
+              },
+            ],
+          },
+        ],
+        msgType: 'MsgSend',
+      },
+    ],
+    signatures: [
+      {
+        pub_key: 'tendermint/PubKeySecp256k1',
+        signature: 'base64',
+        account_number: 0,
+        sequence: 0,
+      },
+    ],
+    memo: '',
+    source: 0,
+    data: '',
+    msgType: 'StdTx',
+  },
+};
